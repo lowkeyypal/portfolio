@@ -214,19 +214,35 @@ sections:
       - type: Label
         label: Golang
       - type: Label
-        label: HTML, CSS, JS
+        label: HTML
       - type: Label
-        label: MongoDB, ExpressJS, ReactJS, NodeJS
+        label: CSS
       - type: Label
-        label: Django, Flask
+        label: JS
+      - type: Label
+        label: MongoDB
+      - type: Label
+        label: ExpressJS
+      - type: Label
+        label: ReactJS
+      - type: Label
+        label: NodeJS
+      - type: Label
+        label: Django
+      - type: Label
+        label: Flask
       - type: Label
         label: SQL
       - type: Label
-        label: Linux, Powershell
+        label: Linux
       - type: Label
-        label: Git, Github
+        label: Powershell
       - type: Label
-        label: Data Structures and Algorithms
+        label: Git
+      - type: Label
+        label: Github
+      - type: Label
+        label: DS and Algo
   - type: DividerSection
     styles:
       self:
