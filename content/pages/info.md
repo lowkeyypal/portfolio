@@ -4,7 +4,7 @@ title: About
 colors: colors-a
 backgroundImage:
   type: BackgroundImage
-  url: /images/bg4.jpg
+  url: /images/infobg.jpg
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
@@ -14,10 +14,7 @@ sections:
     colors: colors-f
     backgroundSize: full
     text: >-
-      ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
-      also where I’m based. I’m currently a free agent, ex-this, ex-that,
-      ex-super big name. When I’m not coding, writing or creating, I eat
-      cereals. I have a dog, check her out [@mygod](https://www.stackbit.com/).
+      ##Welcome to my portfolio! I'm a web developer from Delhi with a passion for creating innovative digital experiences. When I'm not coding, I'm beatboxing, exploring new places, playing video games, or staying updated with the latest tech advancements.
     media:
       type: ImageBlock
       url: /images/about.jpg
@@ -33,7 +30,7 @@ sections:
           - mr-0
         padding:
           - pt-16
-          - pb-12
+          - pb-16
           - pl-4
           - pr-4
         justifyContent: center
@@ -58,65 +55,65 @@ sections:
         justifyContent: center
         borderWidth: 1
         borderStyle: solid
-  - type: MediaGallerySection
-    colors: colors-f
-    subtitle: 'I worked with these folks:'
-    images:
-      - type: ImageBlock
-        url: /images/logo1.svg
-        altText: Logo one
-        caption: Logo one
-      - type: ImageBlock
-        url: /images/logo2.svg
-        altText: Logo two
-        caption: Logo two
-      - type: ImageBlock
-        url: /images/logo3.svg
-        altText: Logo three
-        caption: Logo three
-      - type: ImageBlock
-        url: /images/logo4.svg
-        altText: Logo four
-        caption: Logo four
-      - type: ImageBlock
-        url: /images/logo5.svg
-        altText: Logo five
-        caption: Logo five
-    spacing: 3
-    columns: 5
-    aspectRatio: auto
-    showCaption: false
-    enableHover: false
-    styles:
-      self:
-        width: wide
-        height: auto
-        padding:
-          - pt-8
-          - pb-8
-          - pl-4
-          - pr-4
-        justifyContent: center
-        borderRadius: none
-        borderWidth: 0
-        borderStyle: none
-        borderColor: border-dark
-      title:
-        textAlign: left
-      subtitle:
-        textAlign: left
-  - type: DividerSection
-    styles:
-      self:
-        width: wide
-        padding:
-          - pt-8
-          - pb-8
-          - pl-4
-          - pr-4
-        justifyContent: center
-        borderWidth: 1
-        borderStyle: solid
+  # - type: MediaGallerySection
+  #   colors: colors-f
+  #   subtitle: 'I worked with these folks:'
+  #   images:
+  #     - type: ImageBlock
+  #       url: /images/logo1.svg
+  #       altText: Logo one
+  #       caption: Logo one
+  #     - type: ImageBlock
+  #       url: /images/logo2.svg
+  #       altText: Logo two
+  #       caption: Logo two
+  #     - type: ImageBlock
+  #       url: /images/logo3.svg
+  #       altText: Logo three
+  #       caption: Logo three
+  #     - type: ImageBlock
+  #       url: /images/logo4.svg
+  #       altText: Logo four
+  #       caption: Logo four
+  #     - type: ImageBlock
+  #       url: /images/logo5.svg
+  #       altText: Logo five
+  #       caption: Logo five
+  #   spacing: 3
+  #   columns: 5
+  #   aspectRatio: auto
+  #   showCaption: false
+  #   enableHover: false
+  #   styles:
+  #     self:
+  #       width: wide
+  #       height: auto
+  #       padding:
+  #         - pt-8
+  #         - pb-8
+  #         - pl-4
+  #         - pr-4
+  #       justifyContent: center
+  #       borderRadius: none
+  #       borderWidth: 0
+  #       borderStyle: none
+  #       borderColor: border-dark
+  #     title:
+  #       textAlign: left
+  #     subtitle:
+  #       textAlign: left
+  # - type: DividerSection
+  #   styles:
+  #     self:
+  #       width: wide
+  #       padding:
+  #         - pt-8
+  #         - pb-8
+  #         - pl-4
+  #         - pr-4
+  #       justifyContent: center
+  #       borderWidth: 1
+  #       borderStyle: solid
   - type: FeaturedItemsSection
     colors: colors-f
     items:
@@ -124,7 +121,7 @@ sections:
         actions:
           - type: Link
             label: GitHub
-            url: 'https://github.com/'
+            url: 'https://github.com/silentwraith03'
         styles:
           self:
             textAlign: left
@@ -132,7 +129,7 @@ sections:
         actions:
           - type: Link
             label: Twitter
-            url: 'https://twitter.com/'
+            url: 'https://x.com/lowkeyy_pal'
         styles:
           self:
             textAlign: left
@@ -140,15 +137,7 @@ sections:
         actions:
           - type: Link
             label: LinkedIn
-            url: 'https://www.linkedin.com/'
-        styles:
-          self:
-            textAlign: left
-      - type: FeaturedItem
-        actions:
-          - type: Link
-            label: CodePen
-            url: 'https://codepen.io/'
+            url: 'https://www.linkedin.com/kunal-pal3'
         styles:
           self:
             textAlign: left
@@ -156,7 +145,7 @@ sections:
         actions:
           - type: Link
             label: Discord
-            url: 'https://discord.com/'
+            url: 'https://discordapp.com/users/silent_wraith79'
         styles:
           self:
             textAlign: left
@@ -164,7 +153,15 @@ sections:
         actions:
           - type: Link
             label: Instagram
-            url: 'https://www.instagram.com/'
+            url: 'https://www.instagram.com/lowkeyy_pal'
+        styles:
+          self:
+            textAlign: left
+      - type: FeaturedItem
+        actions:
+          - type: Link
+            label: Reddit
+            url: 'https://www.reddit.com/user/_-SilentWraith-_/'
         styles:
           self:
             textAlign: left
@@ -207,21 +204,29 @@ sections:
     subtitle: 'Skills:'
     items:
       - type: Label
-        label: 'WEB 1, 2, 3'
-      - type: Label
-        label: React
-      - type: Label
-        label: Microsoft Office
-      - type: Label
-        label: Next.js
-      - type: Label
-        label: Netlify
-      - type: Label
-        label: Pancakes
+        label: Python
       - type: Label
         label: C++
       - type: Label
-        label: Swift
+        label: C Prog
+      - type: Label
+        label: Java
+      - type: Label
+        label: Golang
+      - type: Label
+        label: HTML, CSS, JS
+      - type: Label
+        label: MongoDB, ExpressJS, ReactJS, NodeJS
+      - type: Label
+        label: Django, Flask
+      - type: Label
+        label: SQL
+      - type: Label
+        label: Linux, Powershell
+      - type: Label
+        label: Git, Github
+      - type: Label
+        label: Data Structures and Algorithms
   - type: DividerSection
     styles:
       self:
@@ -239,7 +244,7 @@ sections:
     subtitle: 'Contact:'
     colors: colors-f
     text: |
-      [thisismyemail.@myemail.me](mailto:thisismyemail.@myemail.me)
+      [iamkunal79@gmail.com](mailto:iamkunal79@gmail.com)
   - type: DividerSection
     styles:
       self:
@@ -288,17 +293,20 @@ sections:
       - type: FeaturedItem
         subtitle: 'Education:'
         text: |-
-          **2015-2018**
+          **June 2021 ‑ June2024**
 
-          * ba computer sciense at a semi fancy school
+          *  Bachelor in ComputerApplications (BCA)
 
-          **2014**
+             Institute of Innovation in Technology &Management(IITM)
+             
 
-          * react certificate somewhere
+          **Apr 2009 ‑ Apr 2021**
 
-          **2011**
-
-          * my highschool
+          *  Rich Harvest Public School
+            
+             High School
+            
+             Commerce with Python Programming
         styles:
           self:
             textAlign: left
@@ -332,83 +340,5 @@ sections:
       title:
         textAlign: left
       subtitle:
-        textAlign: left
-  - type: DividerSection
-    styles:
-      self:
-        width: wide
-        padding:
-          - pt-12
-          - pb-12
-          - pl-4
-          - pr-4
-        justifyContent: center
-        borderWidth: 1
-        borderStyle: solid
-  - type: ContactSection
-    backgroundSize: full
-    title: "Let’s talk... \U0001F4AC"
-    colors: colors-f
-    form:
-      type: FormBlock
-      elementId: sign-up-form
-      fields:
-        - name: firstName
-          label: First Name
-          hideLabel: true
-          placeholder: First Name
-          isRequired: true
-          width: 1/2
-          type: TextFormControl
-        - name: lastName
-          label: Last Name
-          hideLabel: true
-          placeholder: Last Name
-          isRequired: false
-          width: 1/2
-          type: TextFormControl
-        - name: email
-          label: Email
-          hideLabel: true
-          placeholder: Email
-          isRequired: true
-          width: full
-          type: EmailFormControl
-        - name: message
-          label: Message
-          hideLabel: true
-          placeholder: Tell me about your project
-          isRequired: true
-          width: full
-          type: TextareaFormControl
-        - name: updatesConsent
-          label: Sign me up to recieve my words
-          isRequired: false
-          width: full
-          type: CheckboxFormControl
-      submitLabel: "Submit \U0001F680"
-      styles:
-        submitLabel:
-          textAlign: center
-    styles:
-      self:
-        height: auto
-        width: narrow
-        margin:
-          - mt-0
-          - mb-0
-          - ml-4
-          - mr-4
-        padding:
-          - pt-12
-          - pb-12
-          - pr-4
-          - pl-4
-        alignItems: center
-        justifyContent: center
-        flexDirection: row
-      title:
-        textAlign: left
-      text:
         textAlign: left
 ---
