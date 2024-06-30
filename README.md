@@ -12,7 +12,7 @@ This is a full-fledged portfolio website built with Next.js, Tailwind CSS, [visu
 1. Clone this repository
 
 ```bash
-git clone [url]
+git clone https://github.com/silentwraith03/portfolio.git
 ```
 
 2. Navigate to the directory, then run
