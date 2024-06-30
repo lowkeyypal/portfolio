@@ -16,8 +16,7 @@ sections:
     title: >-
       Hello there! I’m Kunal a student and a developer.
     subtitle: >-
-      Currently, pursuing my education in BCA from the Institute of Innovation in Technology and Management, Delhi. I like to follow latest advancements in Computer Science, Engineering and Technology.
-      I’m looking for opportunities related to web development and python programming.
+      I am pursuing a BCA from the Institute of Innovation in Technology and Management in Delhi. I am keenly interested in the latest advancements in Computer Science, Engineering, and Technology. I am particularly focused on web development and Python programming. As I continue my studies, I seek opportunities to apply my skills and knowledge to real-world projects.
     styles:
       self:
         height: auto

@@ -263,25 +263,10 @@ sections:
       - type: FeaturedItem
         subtitle: 'Experience:'
         text: |-
-          **Current**
+          **May 2023 - August 2023**
 
-          * freelance @freelance.me
+          * Summer Training in MERN Stack
 
-          **2018-2021**
-
-          * fullstack at this startup
-
-          **2015**
-
-          * senior front-end at this place
-
-          **2013**
-
-          * intern developer at a big company
-
-          **2011**
-
-          * flipping burgers
         styles:
           self:
             textAlign: left
