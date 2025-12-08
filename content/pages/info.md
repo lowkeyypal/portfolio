@@ -121,7 +121,7 @@ sections:
         actions:
           - type: Link
             label: GitHub
-            url: 'https://github.com/silentwraith03'
+            url: 'https://github.com/lowkeyypal'
         styles:
           self:
             textAlign: left
