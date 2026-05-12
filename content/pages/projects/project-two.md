@@ -27,7 +27,7 @@ media:
 1. Clone the repository or download the source code.
 
 ```bash
-git clone https://github.com/silentwraith03/ai-platformer-prodigy.git
+git clone https://github.com/lowkeyypal/ai-platformer-prodigy.git
 ```
 
 2. Navigate to the project directory

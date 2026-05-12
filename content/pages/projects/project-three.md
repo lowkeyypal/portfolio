@@ -28,7 +28,7 @@ media:
 1. Clone the repository or download the source code.
 
 ```bash
-git clone https://github.com/silentwraith03/Expense-Tracker-MERN.git
+git clone https://github.com/lowkeyypal/Expense-Tracker-MERN.git
 ```
 
 2. Navigate to the project directory.
