@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Annotated } from '@/components/Annotated';
 
 export default function ImageBlock(props) {
-    const { elementId, className, url, altText = '' } = props;
+    const { elementId, className, url, altText = '', style } = props;
     if (!url) {
         return null;
     }
@@ -15,6 +15,7 @@ export default function ImageBlock(props) {
                 className={classNames('sb-component', 'sb-component-block', 'sb-component-image-block', className)}
                 src={url}
                 alt={altText}
+                style={style}
             />
         </Annotated>
     );

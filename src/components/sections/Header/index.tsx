@@ -12,7 +12,7 @@ export default function Header(props) {
     const { headerVariant, isSticky, title, isTitleVisible, logo, primaryLinks = [], socialLinks = [], styles = {} } = props;
     const headerWidth = styles.self?.width ?? 'narrow';
     return (
-        <header className={classNames('sb-component', 'sb-component-header', isSticky ? 'sticky top-0 z-10' : 'relative', 'border-b', 'border-current')}>
+        <header className={classNames('sb-component', 'sb-component-header', isSticky ? 'sticky top-0 z-50' : 'relative', 'glass-panel', 'border-b-0')}>
             <div
                 className={classNames('mx-auto', mapMaxWidthStyles(headerWidth), {
                     'xl:border-l xl:border-r border-current': headerWidth === 'narrow',

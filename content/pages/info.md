@@ -128,44 +128,12 @@ sections:
       - type: FeaturedItem
         actions:
           - type: Link
-            label: Twitter
-            url: 'https://x.com/lowkeyy_pal'
-        styles:
-          self:
-            textAlign: left
-      - type: FeaturedItem
-        actions:
-          - type: Link
             label: LinkedIn
-            url: 'https://www.linkedin.com/kunal-pal3'
+            url: 'https://www.linkedin.com/in/kunal-pal3/'
         styles:
           self:
             textAlign: left
-      - type: FeaturedItem
-        actions:
-          - type: Link
-            label: Discord
-            url: 'https://discordapp.com/users/silent_wraith79'
-        styles:
-          self:
-            textAlign: left
-      - type: FeaturedItem
-        actions:
-          - type: Link
-            label: Instagram
-            url: 'https://www.instagram.com/lowkeyy_pal'
-        styles:
-          self:
-            textAlign: left
-      - type: FeaturedItem
-        actions:
-          - type: Link
-            label: Reddit
-            url: 'https://www.reddit.com/user/_-SilentWraith-_/'
-        styles:
-          self:
-            textAlign: left
-    columns: 3
+    columns: 2
     spacingX: 120
     spacingY: 0
     styles:
@@ -206,43 +174,83 @@ sections:
       - type: Label
         label: Python
       - type: Label
-        label: C++
-      - type: Label
-        label: C Prog
-      - type: Label
-        label: Java
+        label: JavaScript
       - type: Label
         label: Golang
       - type: Label
-        label: HTML
+        label: C++
       - type: Label
-        label: CSS
+        label: Java
       - type: Label
-        label: JS
+        label: React
       - type: Label
-        label: MongoDB
+        label: Node.js
       - type: Label
-        label: ExpressJS
-      - type: Label
-        label: ReactJS
-      - type: Label
-        label: NodeJS
+        label: Express
       - type: Label
         label: Django
       - type: Label
         label: Flask
       - type: Label
-        label: SQL
+        label: Pandas
       - type: Label
-        label: Linux
+        label: NumPy
       - type: Label
-        label: Powershell
+        label: Matplotlib
+      - type: Label
+        label: TensorFlow
+      - type: Label
+        label: PyTorch
+      - type: Label
+        label: OpenAI Gym
+      - type: Label
+        label: Docker
+      - type: Label
+        label: Ollama
+      - type: Label
+        label: n8n
+      - type: Label
+        label: Kubernetes
+      - type: Label
+        label: GoogleAPI
       - type: Label
         label: Git
       - type: Label
-        label: Github
+        label: GitHub
       - type: Label
-        label: DS and Algo
+        label: GNU/Linux
+      - type: Label
+        label: Bash
+      - type: Label
+        label: PowerShell
+      - type: Label
+        label: Supabase
+      - type: Label
+        label: PostgreSQL
+      - type: Label
+        label: MongoDB
+      - type: Label
+        label: MongoDB Atlas
+      - type: Label
+        label: HTML/CSS
+      - type: Label
+        label: Data Structures and Algorithms
+      - type: Label
+        label: Operating Systems
+      - type: Label
+        label: Database Management Systems
+      - type: Label
+        label: Computer Networking
+      - type: Label
+        label: Machine Learning
+      - type: Label
+        label: AI
+      - type: Label
+        label: REST API Development
+      - type: Label
+        label: Reinforcement Learning
+      - type: Label
+        label: DALL-E 2
   - type: DividerSection
     styles:
       self:
@@ -279,6 +287,16 @@ sections:
       - type: FeaturedItem
         subtitle: 'Experience:'
         text: |-
+          **Aug 2024 ‑ Nov 2024**
+
+          * Rthetapi - Software Developer (Intern)
+
+            Engineered a MERN-based admin panel and signup system for an attendance app, optimizing user management efficiency.
+
+            Integrated API servers for real-time monitoring and data visualization, streamlining operational workflows.
+
+            Validated REST API endpoints using Postman, ensuring robust request handling and reliable data responses.
+
           **May 2023 - August 2023**
 
           * Summer Training in MERN Stack
@@ -298,7 +316,7 @@ sections:
 
           *  Bachelor in ComputerApplications (BCA)
 
-             Institute of Innovation in Technology &Management(IITM)
+             Guru Gobind Singh Indraprastha University
              
 
           **Apr 2009 ‑ Apr 2021**
@@ -330,7 +348,7 @@ sections:
           - mr-0
         padding:
           - pt-8
-          - pb-0
+          - pb-16
           - pl-4
           - pr-4
         justifyContent: center

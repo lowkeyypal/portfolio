@@ -13,7 +13,7 @@ export default function FeaturedItem(props) {
     return (
         <article
             id={elementId || null}
-            className={classNames('sb-component', 'sb-component-block', 'sb-component-item', mapStyles(otherSelfStyles))}
+            className={classNames('sb-component', 'sb-component-block', 'sb-component-item', 'cyber-panel p-6 rounded-2xl transition-transform duration-300 hover:-translate-y-1', mapStyles(otherSelfStyles))}
             style={{
                 borderWidth: borderWidth ? `${borderWidth}px` : null
             }}

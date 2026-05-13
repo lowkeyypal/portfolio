@@ -7,46 +7,8 @@
         "isSticky": false,
         "title": "Kunal Pal",
         "isTitleVisible": true,
-        "primaryLinks": [
-            {
-                "type": "Link",
-                "label": "Info",
-                "url": "/info"
-            },
-            {
-                "type": "Link",
-                "label": "Projects",
-                "url": "/projects"
-            },
-            {
-                "type": "Link",
-                "label": "Blog",
-                "url": "/blog"
-            }
-        ],
-        "socialLinks": [
-            {
-                "type": "Social",
-                "altText": "Twitter",
-                "label": "Twitter",
-                "url": "https://x.com/lowkeyy_pal",
-                "icon": "twitter"
-            },
-            {
-                "type": "Social",
-                "altText": "GitHub",
-                "label": "GitHub",
-                "url": "https://github.com/lowkeyypal",
-                "icon": "github"
-            },
-            {
-                "type": "Social",
-                "altText": "LinkedIn",
-                "label": "LinkedIn",
-                "url": "https://www.linkedin.com/in/kunal-pal3",
-                "icon": "linkedin"
-            }
-        ],
+        "primaryLinks": [],
+        "socialLinks": [],
         "styles": {
             "self": {
                 "width": "full"
@@ -55,32 +17,7 @@
     },
     "footer": {
         "type": "Footer",
-        "primaryLinks": [
-            {
-                "type": "Link",
-                "label": "Info",
-                "url": "/info",
-                "altText": ""
-            },
-            {
-                "type": "Link",
-                "label": "Contact",
-                "url": "mailto:iamkunal79@gmail.com",
-                "altText": ""
-            },
-            {
-                "type": "Link",
-                "label": "Blog",
-                "url": "/blog",
-                "altText": ""
-            },
-            {
-                "type": "Link",
-                "label": "GitHub",
-                "url": "https://github.com/lowkeyypal",
-                "altText": "Netlify templates"
-            }
-        ],
+        "primaryLinks": [],
         "contacts": {
             "type": "ContactBlock",
             "title": "Contact details",

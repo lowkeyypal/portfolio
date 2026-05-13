@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
-
+import { motion } from 'framer-motion';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import Section from '../Section';
 import { Link, Action } from '../../atoms';
@@ -90,14 +90,25 @@ function ProjectsVariantABC(props) {
             })}
         >
             {projects.map((project, index) => (
-                <Link key={index} href={project} className="sb-project-feed-item block group">
-                    <article className="border-b border-current pb-10 max-w-3xl">
+                <motion.div 
+                    key={index} 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ scale: 1.02, y: -5 }}
+                >
+                    <Link href={project} className="sb-project-feed-item block group h-full">
+                        <article className="cyber-panel p-8 rounded-2xl max-w-3xl h-full transition-colors duration-300 group-hover:border-primary">
                         {showFeaturedImage && project.featuredImage && (
-                            <div className="h-0 w-full mb-6 pt-2/3 relative overflow-hidden">
-                                <ImageBlock
-                                    {...project.featuredImage}
-                                    className="absolute left-0 top-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
+                            <div className="h-0 w-full mb-6 pt-2/3 relative overflow-hidden rounded-lg">
+                                <div className="absolute inset-0" style={project.featuredImage.imageScale ? { transform: `scale(${project.featuredImage.imageScale})` } : {}}>
+                                    <ImageBlock
+                                        {...project.featuredImage}
+                                        className={`absolute left-0 top-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105`}
+                                        style={{ objectPosition: project.featuredImage.imagePosition || 'center center' }}
+                                    />
+                                </div>
                             </div>
                         )}
                         {showDate && project.date && (
@@ -117,6 +128,7 @@ function ProjectsVariantABC(props) {
                         )}
                     </article>
                 </Link>
+                </motion.div>
             ))}
         </div>
     );
@@ -134,16 +146,27 @@ function ProjectsVariantD(props) {
             })}
         >
             {projects.map((project, index) => (
-                <Link key={index} href={project} className="sb-project-feed-item block group">
-                    <article className="border-b border-current pb-10 md:pb-12 md:px-4">
+                <motion.div 
+                    key={index} 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ scale: 1.02, y: -5 }}
+                >
+                    <Link href={project} className="sb-project-feed-item block group">
+                        <article className="cyber-panel p-6 md:p-8 rounded-2xl transition-colors duration-300 group-hover:border-primary">
                         <div className="md:flex md:items-center">
                             {showFeaturedImage && project.featuredImage && (
                                 <div className="mb-8 md:shrink-0 md:self-stretch md:w-48 md:mb-0 md:mr-8">
                                     <div className="block h-0 w-full pt-2/3 relative overflow-hidden md:h-24 md:min-h-full md:pt-0">
-                                        <ImageBlock
-                                            {...project.featuredImage}
-                                            className="absolute left-0 top-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        />
+                                        <div className="absolute inset-0" style={project.featuredImage.imageScale ? { transform: `scale(${project.featuredImage.imageScale})` } : {}}>
+                                            <ImageBlock
+                                                {...project.featuredImage}
+                                                className="absolute left-0 top-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                style={{ objectPosition: project.featuredImage.imagePosition || 'center center' }}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -166,7 +189,8 @@ function ProjectsVariantD(props) {
                             )}
                         </div>
                     </article>
-                </Link>
+                    </Link>
+                </motion.div>
             ))}
         </div>
     );

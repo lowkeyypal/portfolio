@@ -39,8 +39,8 @@ module.exports = {
                 '9/16': '56.25%'
             },
             fontFamily: {
-                fontPrimary: ['DM Mono', 'monospace'],
-                fontSecondary: ['Azeret Mono', 'monospace']
+                fontPrimary: ['"Share Tech Mono"', 'monospace'],
+                fontSecondary: ['"Share Tech Mono"', 'monospace']
             },
             letterSpacing: {
                 wide: '.05em',

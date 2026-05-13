@@ -3,9 +3,10 @@
 # dependencies
 /node_modules
 
-# stackbit
-.stackbit/cache
+# stackbit / CMS
+.stackbit/
 .cache
+.kiro/
 
 # testing
 /coverage
@@ -15,6 +16,8 @@
 
 # production
 /build
+
+
 
 # misc
 .DS_Store
@@ -36,3 +39,7 @@ yarn-error.log*
 # IDE
 *.code-workspace
 .idea
+.opencode.json
+
+# Added by code-review-graph
+.code-review-graph/

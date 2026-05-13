@@ -14,26 +14,26 @@ sections:
     colors: colors-f
     backgroundSize: full
     title: >-
-      Hello there! I’m Kunal a student and a developer.
+      Hello, I'm Kunal.
     subtitle: >-
-      I am pursuing a BCA from the Institute of Innovation in Technology and Management in Delhi. I am keenly interested in the latest advancements in Computer Science, Engineering, and Technology. I am particularly focused on web development and Python programming. As I continue my studies, I seek opportunities to apply my skills and knowledge to real-world projects.
+      Student · Developer · Builder. Full-stack apps, intelligent backends, one commit at a time.
     styles:
       self:
         height: auto
-        width: wide
+        width: full
         margin:
           - mt-0
           - mb-0
           - ml-0
           - mr-0
         padding:
-          - pt-36
-          - pb-48
-          - pl-4
-          - pr-4
-        alignItems: center
-        justifyContent: center
-        flexDirection: row-reverse
+          - pt-32
+          - pb-32
+          - pl-8
+          - pr-8
+        alignItems: flex-start
+        justifyContent: flex-start
+        flexDirection: col
       title:
         textAlign: left
       subtitle:
@@ -43,43 +43,11 @@ sections:
       actions:
         justifyContent: flex-start
     type: HeroSection
-    actions: []
-  - colors: colors-f
-    type: FeaturedProjectsSection
-    elementId: ''
     actions:
-      - type: Link
-        label: See all projects
-        url: /projects
-    showDate: false
-    showDescription: true
-    showFeaturedImage: true
-    showReadMoreLink: true
-    variant: variant-b
-    projects:
-      - content/pages/projects/project-two.md
-      - content/pages/projects/project-three.md
-      - content/pages/projects/project-one.md
-    styles:
-      self:
-        height: auto
-        width: wide
-        margin:
-          - mt-0
-          - mb-0
-          - ml-0
-          - mr-0
-        padding:
-          - pt-52
-          - pb-0
-          - pl-4
-          - pr-4
-        justifyContent: center
-      title:
-        textAlign: left
-      subtitle:
-        textAlign: left
-      actions:
-        justifyContent: flex-end
-    subtitle: 'Projects'
+      - type: Button
+        label: Download CV
+        url: /Resume_Kunal_Pal.pdf
+        style: primary
+        icon: arrowRight
+        iconPosition: right
 ---

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,16 +6,33 @@
 
 @layer base {
     body {
-        @apply flex flex-col min-h-screen antialiased;
+        @apply flex flex-col min-h-screen antialiased relative;
+        background-color: #0d0208;
     }
-    body > div,
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        background-size: 100% 4px, 6px 100%;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    body>div,
     .sb-page,
     .sb-base {
         @apply flex flex-col grow;
     }
+
     .sb-layout {
         @apply grow;
     }
+
     h1,
     h2,
     h3,
@@ -30,19 +47,24 @@
 @layer components {
     .sb-markdown {
         @apply text-lg leading-relaxed;
+
         a {
             @apply underline;
         }
+
         a:hover {
             @apply no-underline;
         }
+
         b,
         strong {
             @apply font-medium;
         }
+
         em {
             @apply italic;
         }
+
         h1,
         h2,
         h3,
@@ -51,23 +73,28 @@
         h6 {
             margin: 2.5rem 0 1.5rem;
         }
+
         p {
             margin: 1.5rem 0;
         }
+
         ol {
             @apply list-decimal;
             margin: 1.5rem 0;
             padding-left: 1.25em;
         }
+
         ul {
             @apply list-disc;
             margin: 1.5rem 0;
             padding-left: 1.25em;
         }
-        li > ul,
-        li > ol {
+
+        li>ul,
+        li>ol {
             margin: 0;
         }
+
         blockquote {
             @apply border-l-4 border-current;
             font-size: 1.25em;
@@ -75,41 +102,51 @@
             margin: 2.5rem 0;
             padding-left: 1.25em;
         }
+
         pre {
-            @apply overflow-x-auto leading-normal border border-current;
+            @apply overflow-x-auto leading-normal border border-current bg-black !important;
+            color: #ffffff !important;
             font-size: 0.875em;
             margin: 1.5rem 0;
             padding: 1.25em;
         }
+
         hr {
             @apply h-px bg-current border-0;
             margin: 2.5rem 0;
         }
+
         figure {
             margin: 1.5rem 0;
         }
+
         figcaption {
             @apply leading-normal;
             font-size: 0.875em;
             margin: 0.5rem 0 0;
         }
+
         table {
             @apply w-full text-left border border-collapse border-current;
             margin: 1.5rem 0;
         }
+
         caption {
             @apply text-left;
             font-size: 0.875em;
             margin: 0 0 0.5rem;
         }
+
         th,
         td {
             @apply border-b border-r border-current;
             padding: 0.5em;
         }
+
         th {
             font-weight: medium;
         }
+
         h1:first-child,
         h2:first-child,
         h3:first-child,
@@ -126,11 +163,12 @@
         table:first-child {
             margin-top: 0;
         }
-        h1 + h2,
-        h2 + h3,
-        h3 + h4,
-        h4 + h5,
-        h5 + h6 {
+
+        h1+h2,
+        h2+h3,
+        h3+h4,
+        h4+h5,
+        h5+h6 {
             margin-top: 1.5rem;
         }
     }
@@ -140,11 +178,13 @@
         @apply relative inline-flex items-center justify-center text-lg text-center no-underline transition duration-200 ease-in border-2 border-current;
         box-shadow: none;
     }
+
     .sb-component-button:not(.sb-component-button-no-hover):hover,
     .group:hover .sb-component-button:not(.sb-component-button-no-hover) {
         box-shadow: 0 6px 0 0 currentColor;
         transform: translate(0, -6px);
     }
+
     .sb-component-button-secondary {
         @apply rounded-full;
     }
@@ -153,10 +193,12 @@
     .sb-component-link {
         @apply relative inline-flex items-center justify-center text-lg no-underline;
     }
+
     .sb-component-link:not(.sb-component-link-fill) {
         box-shadow: 0 1px 0 0 currentColor;
         transition: box-shadow 0.25s ease-in-out;
     }
+
     .sb-component-link:not(.sb-component-link-fill):hover,
     .group:hover .sb-component-link:not(.sb-component-link-fill) {
         box-shadow: 0 5px 0 0 currentColor;
@@ -166,6 +208,7 @@
     .sb-component-social {
         @apply relative inline-flex items-center justify-center text-lg no-underline;
     }
+
     .sb-component-social:not(.sb-component-social-fill) {
         @apply opacity-100 hover:opacity-80;
         transition: opacity 0.25s ease-in-out;
@@ -180,6 +223,7 @@
         transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
         z-index: 1;
     }
+
     .sb-component-link-fill:before,
     .sb-component-social-fill:before,
     .sb-header-logo:before {
@@ -191,6 +235,7 @@
         transition: transform 0.25s, opacity 0.25s;
         width: 101%;
     }
+
     .sb-component-link-fill:hover:before,
     .sb-component-social-fill:hover:before,
     .sb-header-logo:hover:before {
@@ -204,39 +249,48 @@
     data:has(.sb-form-control-full) {
         @apply sm:col-span-2;
     }
+
     .sb-form-control {
         @apply mb-6;
     }
+
     .sb-label {
         @apply inline-block mb-1 sm:text-xl;
     }
+
     .sb-input,
     .sb-select,
     .sb-textarea {
         @apply w-full p-3 bg-transparent border border-current focus:outline-none sm:text-xl;
     }
+
     option {
         color: initial;
     }
+
     .sb-checkbox {
         @apply absolute opacity-0 appearance-none select-none;
         height: 1.5em;
         width: 1.5em;
     }
-    .sb-checkbox + .sb-label {
+
+    .sb-checkbox+.sb-label {
         @apply relative cursor-pointer sm:text-xl;
         padding-left: 2.5em;
     }
-    .sb-checkbox + .sb-label:before {
+
+    .sb-checkbox+.sb-label:before {
         @apply absolute left-0 font-sans text-center -translate-y-1/2 border border-current cursor-pointer top-1/2;
         content: '';
         height: 1.5em;
         width: 1.5em;
         line-height: 1.25;
     }
-    .sb-checkbox:checked + .sb-label:before {
+
+    .sb-checkbox:checked+.sb-label:before {
         content: '\2713';
     }
+
     .sb-select {
         @apply bg-no-repeat appearance-none cursor-pointer pr-7;
         background-image: linear-gradient(45deg, transparent 50%, currentColor 0), linear-gradient(135deg, currentColor 50%, transparent 0);
@@ -245,7 +299,7 @@
         background-repeat: no-repeat;
     }
 
-    .text-center + .sb-contact-section-form,
+    .text-center+.sb-contact-section-form,
     .sb-contact-section-form:only-child {
         text-align: center;
     }
@@ -264,110 +318,453 @@
     /* Color palettes */
     .colors-a {
         @apply bg-dark text-on-dark;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-dark placeholder-on-dark;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-dark;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-dark;
         }
+
         .sb-header-overlay {
             @apply bg-dark;
         }
     }
+
     .colors-b {
         @apply bg-light text-on-light;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-light placeholder-on-light;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-light;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-light;
         }
+
         .sb-header-overlay {
             @apply bg-light;
         }
     }
+
     .colors-c {
         @apply bg-primary text-on-primary;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-primary placeholder-on-primary;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-primary;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-primary;
         }
+
         .sb-header-overlay {
             @apply bg-primary;
         }
     }
+
     .colors-d {
         @apply bg-secondary text-on-secondary;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-secondary placeholder-on-secondary;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-secondary;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-secondary;
         }
+
         .sb-header-overlay {
             @apply bg-secondary;
         }
     }
+
     .colors-e {
         @apply bg-complementary text-on-complementary;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-complementary placeholder-on-complementary;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-complementary;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-complementary;
         }
+
         .sb-header-overlay {
             @apply bg-complementary;
         }
     }
+
     .colors-f {
         @apply bg-transparent;
     }
+}
+
+/* Cyberpunk Elements */
+.cyber-panel {
+    @apply relative bg-dark/80 backdrop-blur-md border-l-4 border-primary text-on-dark p-6;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.glitch-text {
+    position: relative;
+    animation: glitch-anim 2.5s infinite;
+}
+
+@keyframes glitch-anim {
+    0% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+        transform: translate(0);
+    }
+
+    5% {
+        text-shadow: -2px 0 red, 2px 0 blue;
+        transform: translate(-2px, 2px);
+    }
+
+    10% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+        transform: translate(2px, -2px);
+    }
+
+    15% {
+        text-shadow: none;
+        transform: translate(0);
+    }
+
+    100% {
+        text-shadow: none;
+        transform: translate(0);
+    }
+}
+
+/* ── Theme transition smoothing ──────────────────────── */
+/* Every visual element that changes between light/dark   */
+/* uses the same easing so everything dissolves together. */
+*,
+*::before,
+*::after {
+    transition:
+        background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 1.0s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Exclude elements that should never animate (layout, transform, etc.) */
+*,
+*::before,
+*::after {
+    transition-property:
+        background-color, color, border-color, box-shadow, opacity !important;
+}
+
+
+/* ============================================================
+   LIGHT MODE — White + Cyber Crimson (#FF003C)
+   All rules scoped to html.light-mode to avoid bleeding.
+   ============================================================ */
+
+/* ── Base ── */
+html.light-mode {
+    color-scheme: light;
+}
+
+html.light-mode body {
+    background-color: #fafafa !important;
+    color: #0a0a0a !important;
+}
+
+/* Softer crimson scanlines on white */
+html.light-mode body::before {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.04) 50%),
+        linear-gradient(90deg, rgba(255, 0, 60, 0.03), rgba(255, 0, 60, 0.01), rgba(255, 0, 60, 0.03)) !important;
+    background-size: 100% 3px, 4px 100% !important;
+}
+
+/* ── Typography ── */
+html.light-mode h1,
+html.light-mode h2,
+html.light-mode h3,
+html.light-mode h4,
+html.light-mode h5,
+html.light-mode h6 {
+    color: #0a0a0a !important;
+}
+
+html.light-mode p,
+html.light-mode li,
+html.light-mode span:not(pre span),
+html.light-mode label {
+    color: #1a1a1a !important;
+}
+
+/* Glitch text gets crimson shadows in light mode */
+html.light-mode .glitch-text {
+    color: #0a0a0a !important;
+}
+
+@keyframes glitch-anim-light {
+    0% {
+        text-shadow: 2px 0 #FF003C, -2px 0 #ff6699;
+        transform: translate(0);
+    }
+
+    5% {
+        text-shadow: -2px 0 #FF003C, 2px 0 #ff6699;
+        transform: translate(-2px, 2px);
+    }
+
+    10% {
+        text-shadow: 2px 0 #FF003C, -2px 0 #ff6699;
+        transform: translate(2px, -2px);
+    }
+
+    15% {
+        text-shadow: none;
+        transform: translate(0);
+    }
+
+    100% {
+        text-shadow: none;
+        transform: translate(0);
+    }
+}
+
+html.light-mode .glitch-text {
+    animation: glitch-anim-light 2.5s infinite !important;
+}
+
+/* ── Color palette overrides ── */
+html.light-mode .colors-a,
+html.light-mode .colors-f,
+html.light-mode .colors-b,
+html.light-mode .colors-c,
+html.light-mode .colors-d {
+    background-color: transparent !important;
+    color: #0a0a0a !important;
+}
+
+/* ── Cyber panels ── */
+html.light-mode .cyber-panel {
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    border-left-color: #FF003C !important;
+    border-color: #FF003C !important;
+    color: #0a0a0a !important;
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.15), inset 0 0 40px rgba(255, 0, 60, 0.03) !important;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+html.light-mode .cyber-panel * {
+    color: #0a0a0a !important;
+}
+
+/* Primary / accent color swap: green to crimson */
+html.light-mode .text-primary,
+html.light-mode .text-on-dark {
+    color: #FF003C !important;
+}
+
+html.light-mode .bg-primary {
+    background-color: #FF003C !important;
+    color: #ffffff !important;
+}
+
+html.light-mode .border-primary {
+    border-color: #FF003C !important;
+}
+
+html.light-mode .border-primary\/20 {
+    border-color: rgba(255, 0, 60, 0.2) !important;
+}
+
+html.light-mode .border-primary\/40 {
+    border-color: rgba(255, 0, 60, 0.4) !important;
+}
+
+html.light-mode .border-primary\/50 {
+    border-color: rgba(255, 0, 60, 0.5) !important;
+}
+
+html.light-mode .bg-primary\/10 {
+    background-color: rgba(255, 0, 60, 0.08) !important;
+}
+
+html.light-mode .text-primary\/70 {
+    color: rgba(255, 0, 60, 0.7) !important;
+}
+
+html.light-mode .text-primary\/80 {
+    color: rgba(255, 0, 60, 0.8) !important;
+}
+
+html.light-mode .text-primary\/60 {
+    color: rgba(255, 0, 60, 0.6) !important;
+}
+
+/* ── Subtitle left border ── */
+html.light-mode .border-primary\/50 {
+    border-color: rgba(255, 0, 60, 0.5) !important;
+}
+
+/* ── Navbar ── */
+html.light-mode nav {
+    border-bottom-color: rgba(255, 0, 60, 0.2) !important;
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.08) !important;
+}
+
+html.light-mode nav.bg-\[#0d0208\]\/90,
+html.light-mode nav[class*="bg-[#0d0208]"] {
+    background-color: rgba(250, 250, 250, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* Name + dot */
+html.light-mode nav .text-primary {
+    color: #FF003C !important;
+}
+
+html.light-mode nav .bg-primary {
+    background-color: #FF003C !important;
+}
+
+/* Icon links */
+html.light-mode nav a svg,
+html.light-mode nav a {
+    color: #FF003C !important;
+}
+
+html.light-mode nav a:hover {
+    color: #cc0030 !important;
+}
+
+/* Terminal toggle button */
+html.light-mode nav button {
+    border-color: rgba(255, 0, 60, 0.5) !important;
+    color: #FF003C !important;
+}
+
+html.light-mode nav button:hover,
+html.light-mode nav button[class*="bg-primary"] {
+    background-color: #FF003C !important;
+    color: #ffffff !important;
+    border-color: #FF003C !important;
+}
+
+/* Theme toggle */
+html.light-mode nav button svg {
+    color: inherit !important;
+}
+
+/* ── Terminal modal ── */
+/* Terminal modal title bar */
+html.light-mode .rounded-t-lg {
+    background-color: #f0f0f0 !important;
+    border-color: rgba(255, 0, 60, 0.3) !important;
+}
+
+/* Terminal text */
+html.light-mode .text-white {
+    color: #ffffff !important;
+}
+
+html.light-mode .text-red-400 {
+    color: #00ff41 !important; /* Swapping Red for Green in Light Mode hacking for contrast */
+}
+
+/* Scrollbar crimson */
+html.light-mode .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 60, 0.3) !important;
+}
+
+/* Input cursor */
+html.light-mode .caret-primary {
+    caret-color: #FF003C !important;
+}
+
+/* Terminal border */
+html.light-mode .border-primary\/40 {
+    border-color: rgba(255, 0, 60, 0.35) !important;
+}
+
+html.light-mode .border-t.border-primary\/20 {
+    border-color: rgba(255, 0, 60, 0.2) !important;
+}
+
+/* ── Buttons & links ── */
+html.light-mode a {
+    color: #FF003C !important;
+}
+
+html.light-mode a:hover {
+    color: #cc0030 !important;
+}
+
+/* ── pulse/animate dot ── */
+html.light-mode .animate-pulse {
+    background-color: #FF003C !important;
+}
+
+/* ── Scrollbar (global) ── */
+html.light-mode ::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 60, 0.25) !important;
+}
+
+/* ── Page background ── */
+html.light-mode .sb-page {
+    background-color: #fafafa !important;
 }
